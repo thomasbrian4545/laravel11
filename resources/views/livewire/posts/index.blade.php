@@ -1,3 +1,5 @@
-<div>
-    Posts : If your happiness depends on money, you will never be happy with yourself.
+<div class="row">
+    <div class="col-md-6">
+        <livewire:posts.create />
+    </div>
 </div>
