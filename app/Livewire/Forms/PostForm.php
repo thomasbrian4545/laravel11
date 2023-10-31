@@ -5,6 +5,7 @@ namespace App\Livewire\Forms;
 use App\Models\User;
 use Livewire\Attributes\Rule;
 use Livewire\Form;
+use Spatie\Flash\Flash;
 
 class PostForm extends Form
 {
@@ -18,6 +19,9 @@ class PostForm extends Form
     {
         $user = User::find(1); // @todo
         $user->posts()->create($this->validate());
+
+        Flash('Post created successfully.', 'success');
+
         $this->reset();
     }
 }
